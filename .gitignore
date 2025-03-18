@@ -1,0 +1,28 @@
+# Fișiere binare compilate
+*.exe
+*.out
+*.o
+*.a
+*.so
+
+# Module și dependințe Go
+/go/pkg/
+/go/bin/
+/vendor/
+
+# Cache-uri și foldere generate
+*.log
+*.tmp
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# Variabile de mediu și configurații locale
+.env
+config.json
+
+# Fișiere Git-Related
+.idea/
+.vscode/
+*.bak
