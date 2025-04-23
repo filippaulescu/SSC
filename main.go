@@ -3,6 +3,7 @@ package main
 import (
 	"ic-project/controllers"
 	"ic-project/initializers"
+	"ic-project/middleware"
 
 	"github.com/gin-gonic/gin"
 )
@@ -18,6 +19,7 @@ func main() {
 
     // Corectat
     r.POST("/signup", controllers.Signup)
-
-    r.Run() // Pornirea serverului pe portul implicit 8080
+    r.POST("/login", controllers.Login)
+    r.GET("/validate", middleware.RequireAuth, controllers.Validate)
+    r.Run(":3000") // Rulează explicit pe portul 3000
 }
