@@ -17,7 +17,7 @@ func init() {
 func main() {
     r := gin.Default()
 
-    // Corectat
+    
     r.POST("/signup", controllers.Signup)
     r.POST("/login", controllers.Login)
     r.GET("/validate", middleware.RequireAuth, controllers.Validate)

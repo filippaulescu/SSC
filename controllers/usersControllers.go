@@ -68,7 +68,7 @@ func Login(c *gin.Context){
 	}
 	//Look up requested user
 	var user models.User
-	initializers.DB.First(&user, "email = ?", body.Email)
+	initializers.DB.First(&user, "email = ?", body.Email) // cauta primul utilizator din baza de date cu acele credentiale
 
 	if user.ID == 0 {
 		c.JSON(http.StatusBadRequest, gin.H{
